@@ -10,5 +10,8 @@ data class CarModel(
     val height: Int,
     val url: String,
     val download_url: String,
+
+
+
 )
 
