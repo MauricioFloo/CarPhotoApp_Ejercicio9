@@ -82,7 +82,7 @@ fun ResultScreen(photos:String, modifier: Modifier = Modifier){
 fun CarPhotoCard(photo: CarModel, modifier: Modifier){
     AsyncImage(
         model = ImageRequest.Builder(context = LocalContext.current)
-            .data(photo.url)
+            .data(photo.download_url)
             .crossfade(true)
             .build()
 

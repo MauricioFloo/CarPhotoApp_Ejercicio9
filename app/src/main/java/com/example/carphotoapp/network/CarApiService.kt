@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface CarApiService{
-    @GET("v2/list?page=5&limit=20&query=car")
+    @GET("v2/list?page=10&limit=20&query=car")
     suspend fun  getPhotos():List<CarModel>
 }
 
