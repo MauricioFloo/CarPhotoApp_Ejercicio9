@@ -11,39 +11,9 @@ import okhttp3.OkHttpClient
 import retrofit2.http.Headers
 
 
-
-private const val BASE_URL =  "https://picsum.photos"
-
-private val retrofit = Retrofit.Builder()
-    .addConverterFactory(Json.asConverterFactory("application/json".toMediaType() ) )
-    .baseUrl(BASE_URL)
-    .build()
-
 interface CarApiService{
     @GET("v2/list?page=10&limit=20&query=car")
     suspend fun  getPhotos():List<CarModel>
 }
 
 
-//PATRON DE DISEÑO Singleton
-
-object CarApi{
-    val retrofitService: CarApiService by lazy{
-        retrofit.create(CarApiService::class.java)
-    }
-}
-
-//https://picsum.photos/v2/list?page=1&limit=10&query=ferrari
-/*
-private const val BASE_URL =  "https://picsum.photos"
-
-private val retrofit = Retrofit.Builder()
-    .addConverterFactory(Json.asConverterFactory("application/json".toMediaType() ) )
-    .baseUrl(BASE_URL)
-    .build()
-
-interface CarApiService{
-    @GET("v2/list?page=5&limit=10&query=ferrari")
-    suspend fun  getPhotos():List<CarModel>
-}
- */

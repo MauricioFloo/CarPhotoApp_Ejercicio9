@@ -29,7 +29,7 @@ fun CarApp(){
     ) {
         Surface(
             modifier = Modifier.fillMaxSize()) {
-            val carViewModel: CarViewModel = viewModel()
+            val carViewModel: CarViewModel = viewModel(factory = CarViewModel.Factory)
             HomeScreen(carUiState = carViewModel.carUiState, contentPadding = it)
 
         }
