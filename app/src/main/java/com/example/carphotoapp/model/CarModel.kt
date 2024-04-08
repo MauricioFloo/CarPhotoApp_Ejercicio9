@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class CarModel(
-    val id: Int,
+    val id: String,
     val author: String,
     val width: Int,
     val height: Int,
@@ -13,5 +13,5 @@ data class CarModel(
 
 
 
-)
+    )
 

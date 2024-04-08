@@ -2,16 +2,14 @@ package com.example.carphotoapp.fake
 
 import com.example.carphotoapp.viewmodel.CarUiState
 import com.example.carphotoapp.viewmodel.CarViewModel
-import kotlinx.coroutines.test.TestDispatcher
 import kotlinx.coroutines.test.runTest
-import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import com.example.carphotoapp.fake.rules.TestDispatcherRule
-
+import org.junit.Assert.assertEquals
 
 class CarViewModelTest {
-    @get: Rule
+    @get:Rule
     val testDispatcher = TestDispatcherRule()
     @Test
     fun carViewModel_getCarPhotos_verifyCarUiStateSuccess(){
